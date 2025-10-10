@@ -1,0 +1,74 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; /* Often included in resets */
+    }
+    .nav{
+        position: sticky;
+        text-align: center;
+        color: wheat;
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 0;
+            
+        }
+    .Hero{
+          display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 40px;
+    }    
+    .Hero-img{
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+          object-fit: cover;
+    }
+    .hero-text{
+          max-width: 500px;
+    }
+    .hero-text h2{
+          margin-bottom: 15px;
+          font-size: 2rem;
+    }
+   .hero-text p {
+      margin-bottom: 15px;
+      line-height: 1.5;
+     }
+   .hero-text a {
+      color: blue;
+      btext-decoration: none;
+     font-weight: bold;
+    }
+    .hero-text a:hover{
+        color: red;
+    }
+
+
+     .fixed{
+         position: fixed;
+         background-color: black;
+         color: wheat;
+         border-radius: 30px;
+         padding: 5px;
+         bottom: 20px;
+         right: 20px;
+     }
+    .gallery{
+      gap: 15px;
+      padding: 30px;
+    }
+
+   .gallery img {
+      width: 100%;
+      height: 200px;
+     object-fit: cover;
+      border-radius: 8px;
+      }
+   .footer{
+       background-color: black;
+       color: wheat;
+       text-align: center;
+       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   }
