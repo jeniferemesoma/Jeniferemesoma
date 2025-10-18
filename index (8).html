@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jenifer Emesoma | Portfolio</title>
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: skyblue;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1, h2, h3 {
+      color: #111;
+    }
+
+    
+    header {
+      background: #222;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    /* NAVIGATION MENU */
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00adb5;
+    }
+
+   
+    #menu-toggle {
+      display: none;
+    }
+
+    .menu-btn {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-btn span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+   
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    #about {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    #about img {
+      width: 250px;
+    }
+
+    #about p {
+      flex: 1;
+      font-size: 1rem;
+    }
+
+  
+    .projects {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 15px;
+      flex: 1 1 calc(33.333% - 20px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .project-card img {
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+ 
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    button {
+      padding: 10px;
+      background: #00adb5;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #007a7c;
+    }
+
+   
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .social-links a {
+      color: #00adb5;
+      margin: 0 8px;
+      font-weight: bold;
+    }
+
+    .social-links a:hover {
+      color: #fff;
+    }
+
+  
+    @media (max-width: 768px) {
+      /* Show hamburger */
+      .menu-btn {
+        display: flex;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 180px;
+        border-radius: 5px;
+        padding: 10px 0;
+      }
+
+      nav ul li {
+        padding: 10px 15px;
+      }
+
+      /* When menu is checked, show links */
+      #menu-toggle:checked + .menu-btn + nav ul {
+        display: flex;
+      }
+
+      #about {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .project-card {
+        flex: 1 1 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  
+  <header>
+    <div class="logo">Jenifer Emesoma</div>
+
+    
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section id="about">
+    <img src="IMG_20250729_101517_373.jpg" alt="Jenifer photo">
+    <div>
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm <strong>Jenifer Emesoma</strong>, a creative and passionate Web Developer. 
+        I love building modern, responsive, and user-friendly websites using HTML and CSS. 
+        I enjoy solving design challenges and bringing ideas to life through clean code.
+      </p>
+    </div>
+  </section>
+
+  
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="images (29).jpeg" alt="Project 1">
+        <h3>Portfolio Website</h3>
+        <p>A personal website to showcase my skills, projects, and contact information.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="6A.-20-Landing-Page-Examples-to-Learn-From-1200x675.jpg" alt="Project 2">
+        <h3>Landing Page</h3>
+        <p>A responsive landing page design using HTML5 and CSS3 Flexbox layout.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="images (31).jpeg" alt="Project 3">
+        <h3>To-Do List</h3>
+        <p>A simple web page design for managing daily tasks and goals.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+ 
+  <footer>
+    <p>Connect with me:</p>
+    <div class="social-links">
+      <a href="#">LinkedIn</a> |
+      <a href="#">GitHub</a> |
+      <a href="#">Twitter</a>
+    </div>
+    <p>&copy; 2025 Jenifer Emesoma. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
+<body>
+  
+</body>
+
+</html>
