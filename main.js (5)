@@ -1,0 +1,74 @@
+
+// 🔥 Simple Interactive JavaScript Quiz App 🔥
+
+// Use constants and variables
+const quizTitle = "🎯 JavaScript Basics Quiz";
+let score = 0;
+let playAgain = true;
+
+// Array of question objects (strings and correct answers)
+const questions = [
+  {
+    question: "1️⃣ What keyword is used to declare a variable in JavaScript?",
+    answer: "let"
+  },
+  {
+    question: "2️⃣ Which data type is used to store text values?",
+    answer: "string"
+  },
+  {
+    question: "3️⃣ What operator is used to compare both value and type?",
+    answer: "==="
+  },
+  {
+    question: "4️⃣ True or False: JavaScript is a case-sensitive language.",
+    answer: "true"
+  },
+  {
+    question: "5️⃣ What function is used to display messages in the console?",
+    answer: "console.log"
+  }
+];
+
+// Main quiz loop — allows replay
+do {
+  score = 0;
+  const incorrectQuestions = [];
+
+  alert(quizTitle + "\nAnswer the following questions:");
+
+  // Loop through questions
+  for (let i = 0; i < questions.length; i++) {
+    const userInput = prompt(questions[i].question);
+    if (!userInput) {
+      alert("You skipped this question.");
+      continue;
+    }
+
+    // Case-insensitive comparison
+    if (userInput.trim().toLowerCase() === questions[i].answer.toLowerCase()) {
+      alert("✅ Correct!");
+      score++;
+    } else {
+      alert(`❌ Wrong! The correct answer was "${questions[i].answer}".`);
+      incorrectQuestions.push(questions[i].question);
+    }
+  }
+
+  // Display total results
+  alert(
+    `🎯 Quiz Complete!\n\nYour Score: ${score}/${questions.length}`
+  );
+
+  if (incorrectQuestions.length > 0) {
+    let wrongList = incorrectQuestions.join("\n- ");
+    alert(`You missed the following questions:\n- ${wrongList}`);
+  }
+
+  // Replay option
+  const retry = prompt("Would you like to play again? (yes/no)");
+  playAgain = retry && retry.toLowerCase() === "yes";
+
+} while (playAgain);
+
+alert("👋 Thanks for playing the JavaScript Quiz!");
